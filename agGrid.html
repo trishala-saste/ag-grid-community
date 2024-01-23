@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>AG Grid</title>
+		<meta charSet="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <!-- Include the JS for AG Grid -->
+      <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+      <!-- Include the core CSS, this is needed by the grid -->
+      <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-grid.css"/>
+      <!-- Include the theme CSS, only need to import the theme you are going to use -->
+      <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/ag-grid-community/styles/ag-theme-alpine.css"/>
+		<style media="only screen">
+            html, body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                box-sizing: border-box;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            html {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0;
+                overflow: auto;
+            }
+
+            body {
+                padding: 1rem;
+                overflow: auto;
+            }
+            .example-wrapper {
+  display: flex;
+  flex-direction: column;
+ 
+}
+[col-id=age],[col-id=gold],[col-id=silver],[col-id=bronze],[col-id=total]{
+  text-align: right !important;
+}
+
+#myGrid {
+  flex: 1 1 0px;
+  width: 100%;
+}
+
+.ag-theme-alpine {
+  --ag-header-column-separator-display: block;
+  --ag-header-column-separator-height: 100%;
+  --ag-header-column-separator-width: 2px;
+  --ag-header-column-separator-color: purple;
+
+  --ag-header-column-resize-handle-display: block;
+  --ag-header-column-resize-handle-height: 25%;
+  --ag-header-column-resize-handle-width: 5px;
+  --ag-header-column-resize-handle-color: orange;
+}
+
+.btns{
+  background: #f8f8f8;
+  border: 1px solid gray;
+  padding: 5px;
+  margin: 4px;
+}
+        </style>
+	</head>
+	<body>
+    <div class="example-wrapper">
+			<div style="margin-bottom: 1rem">
+				<button onclick="onMedalsFirst()" class="btns">Medals First</button>
+				<button onclick="onMedalsLast()" class="btns">Medals Last</button>
+				<button onclick="onCountryFirst()" class="btns">Country First</button>
+				<button onclick="onSwapFirstTwo()" class="btns">Swap First Two</button>
+        <button onclick="sizeToFit()" class="btns">Size to Fit</button>
+        <button onclick="autoSizeAll(false)" class="btns">Auto-Size All</button>
+        <button onclick="autoSizeAll(true)" class="btns">Auto-Size All (Skip Header)</button>
+			</div>
+			</div>
+
+		<div id="myGrid" class="ag-theme-alpine" style="height: 100%">
+		</div>
+
+   
+		
+		<!-- <div id="myGrid" class="ag-theme-alpine" style="height: 100%">
+		</div> -->
+		<script>var __basePath = './';</script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/ag-grid-enterprise@30.0.0/dist/ag-grid-enterprise.min.js">
+		</script>
+        -->
+		<script src="main.js">
+		</script>
+    <br/> <br/> <br/><br/> <br/> <br/>
+	</body>
+</html>

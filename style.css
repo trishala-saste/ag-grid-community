@@ -1,0 +1,14 @@
+.ag-header-cell-filtered {
+  background-color: #1b6d85 !important;
+  color: #fff !important;
+}
+
+.ag-header-cell-filtered span {
+  color: #fff !important;
+}
+
+.btns{
+  background: #eae8e8;
+  border: 1px solid gray;
+  padding: 5px;
+}
